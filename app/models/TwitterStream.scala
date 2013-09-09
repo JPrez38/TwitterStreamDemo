@@ -5,7 +5,7 @@ import models.Mail
 
 object Util {
   val config = new twitter4j.conf.ConfigurationBuilder()
-    .setOAuthConsumerKey(System.getenv("OAUTHCONSUMERKEY")
+    .setOAuthConsumerKey(System.getenv("OAUTHCONSUMERKEY"))
     .setOAuthConsumerSecret(System.getenv("OAUTHCONSUMERSECRET"))
     .setOAuthAccessToken(System.getenv("OAUTHACCESSTOKEN"))
     .setOAuthAccessTokenSecret(System.getenv("OAUTHACCESSTOKENSECRET"))
