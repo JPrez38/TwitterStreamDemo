@@ -1,4 +1,7 @@
 This is your new Play 2.1 application
 =====================================
 
-This file will be packaged with your application, when using `play dist`.
+This app streams all tweets containing a specific word and emails the desired account
+upon recieving a new tweet containing the keyword
+
+Uses Scala 2.10.0, sbt 0.12.0 and Play 2.1.3 and is deployed on a heroku server
