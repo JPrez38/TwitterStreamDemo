@@ -9,7 +9,7 @@ object Mail {
 def sendEmail(message: String) = {
 	val mail = use[MailerPlugin].email
       .setSubject("New Tapingo Tweet")
-      .addRecipient($EMAIL1,$EMAIL2)
+      .addRecipient(System.getenv("EMAIL1"),System.getenv("EMAIL2"))
       .addFrom("Tapingo Twitter Feed<tapingotwitter@tapingo.com>")
 
     mail.send(message)

@@ -5,10 +5,10 @@ import models.Mail
 
 object Util {
   val config = new twitter4j.conf.ConfigurationBuilder()
-    .setOAuthConsumerKey($OAUTHCONSUMERKEY)
-    .setOAuthConsumerSecret($OAUTHCONSUMERSECRET)
-    .setOAuthAccessToken($OAUTHACCESSTOKEN)
-    .setOAuthAccessTokenSecret($OAUTHACCESSTOKENSECRET)
+    .setOAuthConsumerKey(System.getenv("OAUTHCONSUMERKEY")
+    .setOAuthConsumerSecret(System.getenv("OAUTHCONSUMERSECRET"))
+    .setOAuthAccessToken(System.getenv("OAUTHACCESSTOKEN"))
+    .setOAuthAccessTokenSecret(System.getenv("OAUTHACCESSTOKENSECRET"))
     .build
 
   def simpleStatusListener = new StatusListener() {
