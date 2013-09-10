@@ -1,1 +1,1 @@
-worker: java ${JAVA_OPTS} target/start models.Main
+worker: java ${JAVA_OPTS} -cp "staged/*" models.main.Main
