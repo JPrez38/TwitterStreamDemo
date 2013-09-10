@@ -2,7 +2,7 @@ package models
 
 
 object Main {
-	def main = Action{
+	def main(){
   		val search = Array("tapingo","Tapingo")
   		SearchStreamer.run(search)
     }
