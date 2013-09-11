@@ -1,7 +1,7 @@
 package models
  
 import twitter4j._
-import models.Mail
+
 
 object Util {
   val config = new twitter4j.conf.ConfigurationBuilder()
