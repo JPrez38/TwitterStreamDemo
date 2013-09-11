@@ -1,2 +1,2 @@
-worker: java ${JAVA_OPTS} -cp "staged/*" scala Main.scala
+worker: java ${JAVA_OPTS} -cp "staged/*" app.models.Main
 
