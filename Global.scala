@@ -7,7 +7,8 @@ object Global extends GlobalSettings {
     import play.api.libs.concurrent.Akka
     import scala.concurrent.duration._
     import play.api.libs.concurrent.Execution.Implicits._
-    Akka.system(app).scheduler.schedule(10 seconds, 30 minutes){
+    import ExecutionContext.Implicits.global
+    Akka.system(app).scheduler.schedule(10 seconds, 40000 minutes){
     	import models.SearchStreamer
     	println("Worker process woke up")
   		val search = Array("tapingo","Tapingo")
@@ -17,6 +18,8 @@ object Global extends GlobalSettings {
   
   override def onStop(app: Application) {
     Logger.info("Application shutdown...")
+    import models.Mail
+    Mail.sendEmail("APPLICATION SHUTDOWN")
   }  
     
 }
