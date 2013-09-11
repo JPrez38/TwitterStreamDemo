@@ -1,2 +1,2 @@
-worker: java ${JAVA_OPTS} -cp "staged/*" app.models.Main
+web: target/start -Dhttp.port=${PORT} ${JAVA_OPTS}
 
