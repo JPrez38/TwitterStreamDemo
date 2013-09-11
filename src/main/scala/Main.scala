@@ -1,3 +1,5 @@
+import models.SearchStreamer
+
 object Main {
 	println("hello")
 	def main(args: Array[String]){
