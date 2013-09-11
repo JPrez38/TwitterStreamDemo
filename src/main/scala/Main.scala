@@ -1,6 +1,3 @@
-package models
-
-
 object Main {
 	println("hello")
 	def main(args: Array[String]){
