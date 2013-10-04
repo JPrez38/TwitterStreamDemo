@@ -8,9 +8,9 @@ case class Mail()
 object Mail {
 def sendEmail(message: String) = {
 	val mail = use[MailerPlugin].email
-      .setSubject("New Tapingo Tweet")
+      .setSubject("New tech@nyu tweet")
       .addRecipient(System.getenv("EMAIL1"),System.getenv("EMAIL2"))
-      .addFrom("Tapingo Twitter Feed<tapingotwitter@tapingo.com>")
+      .addFrom("Tech@nyu Twitter Feed<techatnyutwitter@tapingo.com>")
 
     mail.send(message)
     	

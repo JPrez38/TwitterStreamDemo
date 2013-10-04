@@ -15,10 +15,8 @@ object Util {
 	  def onStatus(status: Status) { 
       val screenName = status.getUser().getScreenName()
       val text = status.getText
-      if (screenName != "tapingo" && screenName != "UABDining" && !text.contains("RT")){
-        val email = "@" + screenName + ": " + text 
-        Mail.sendEmail(email)
-      }
+      val email = "@" + screenName + ": " + text 
+      Mail.sendEmail(email)
     }
 	  def onDeletionNotice(statusDeletionNotice: StatusDeletionNotice) {}
 	  def onTrackLimitationNotice(numberOfLimitedStatuses: Int) {}
