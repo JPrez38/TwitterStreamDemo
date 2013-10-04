@@ -13,8 +13,10 @@ object Util {
 
   def simpleStatusListener = new StatusListener() {
 	  def onStatus(status: Status) { 
-      if (status.getUser().getScreenName() != "tapingo"){
-        val email = "@" + status.getUser().getScreenName() + ": " + status.getText 
+      val screenName = status.getUser().getScreenName()
+      val text = status.getText
+      if (screenName != "tapingo" && screenName != "UABDining" && !text.contains("RT")){
+        val email = "@" + screenName + ": " + text 
         Mail.sendEmail(email)
       }
     }
