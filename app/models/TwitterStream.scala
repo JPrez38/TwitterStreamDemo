@@ -13,8 +13,9 @@ object Util {
 
   def simpleStatusListener = new StatusListener() {
 	  def onStatus(status: Status) { 
-      println(status.getText) 
-      Mail.sendEmail(status.getText)
+      //if (status.getUser().getName() !=)
+      val email = status.getUser().getName() + ": " + status.getText 
+      Mail.sendEmail(email)
     }
 	  def onDeletionNotice(statusDeletionNotice: StatusDeletionNotice) {}
 	  def onTrackLimitationNotice(numberOfLimitedStatuses: Int) {}
