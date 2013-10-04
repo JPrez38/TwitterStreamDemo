@@ -14,7 +14,7 @@ object Util {
   def simpleStatusListener = new StatusListener() {
 	  def onStatus(status: Status) { 
       //if (status.getUser().getName() !=)
-      val email = status.getUser().getName() + ": " + status.getText 
+      val email = status.getUser() + ": " + status.getText 
       Mail.sendEmail(email)
     }
 	  def onDeletionNotice(statusDeletionNotice: StatusDeletionNotice) {}
