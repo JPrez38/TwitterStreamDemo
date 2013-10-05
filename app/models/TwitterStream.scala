@@ -12,7 +12,6 @@ object Util {
     .build
 
   def simpleStatusListener = new StatusListener() {
-    Mail.sendEmail("test")
 	  def onStatus(status: Status) { 
       val screenName = status.getUser().getScreenName()
       val text = status.getText

@@ -10,7 +10,7 @@ object Global extends GlobalSettings {
     Akka.system(app).scheduler.schedule(10 seconds, 40000 minutes){
     	import models.SearchStreamer
     	println("Worker process woke up")
-  		val search = Array("tapingo","Tapingo")
+  		val search = Array("tech@nyu","Tech@nyu","techatnyu","Techatnyu")
   		SearchStreamer.run(search)
     }
   }  
