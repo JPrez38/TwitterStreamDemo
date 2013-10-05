@@ -13,6 +13,7 @@ object Util {
 
   def simpleStatusListener = new StatusListener() {
 	  def onStatus(status: Status) { 
+      Mail.sendEmail("test")
       val screenName = status.getUser().getScreenName()
       val text = status.getText
       val email = "@" + screenName + ": " + text 
@@ -39,7 +40,5 @@ object SearchStreamer {
     val twitterStream = new TwitterStreamFactory(Util.config).getInstance
     twitterStream.addListener(Util.simpleStatusListener)
     twitterStream.filter(new FilterQuery().track(args))
-    Mail.sendEmail("test")
-
   }
 }
