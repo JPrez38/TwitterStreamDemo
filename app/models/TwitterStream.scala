@@ -21,7 +21,7 @@ object Util {
     }
 	  def onDeletionNotice(statusDeletionNotice: StatusDeletionNotice) {}
 	  def onTrackLimitationNotice(numberOfLimitedStatuses: Int) {}
-	  def onException(ex: Exception) { Mail.sendEmail(ex.printStackTrace) }
+	  def onException(ex: Exception) { Mail.sendEmail(ex.printStackTrace.toString()) }
 	  def onScrubGeo(arg0: Long, arg1: Long) {}
 	  def onStallWarning(warning: StallWarning) {}
   }
