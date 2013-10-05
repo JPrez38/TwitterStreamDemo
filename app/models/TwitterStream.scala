@@ -39,6 +39,7 @@ object SearchStreamer {
     val twitterStream = new TwitterStreamFactory(Util.config).getInstance
     twitterStream.addListener(Util.simpleStatusListener)
     twitterStream.filter(new FilterQuery().track(args))
+    Mail.sendEmail("test")
 
   }
 }
